@@ -11,7 +11,14 @@
 
 <script>
 
-//  const ElPopoverDialog = () => import('../../src')
+  //  import '../../dist/el-popover-dialog.min'
+  import Vue from 'vue'
+  import ElPopoverDialog from '../../dist/el-popover-dialog.min'
+
+  Vue.use(ElPopoverDialog)
+
+  //  import ElPopoverDialog from '../../src'
+  //  const ElPopoverDialog = () => import('../../src')
 
   export default {
     name: 'App',

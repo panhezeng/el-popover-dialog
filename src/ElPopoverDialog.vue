@@ -25,11 +25,14 @@
   </el-popover>
 </template>
 <script>
+  import Vue from 'vue'
   import { Button, Popover } from 'element-ui'
+
+  Vue.use(Button)
+  Vue.use(Popover)
 
   export default {
     name: 'ElPopoverDialog',
-    components: {'el-button': Button, 'el-popover': Popover},
     props: {
       popoverContentShow: {
         type: Boolean,
