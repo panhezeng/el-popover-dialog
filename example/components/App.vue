@@ -11,11 +11,11 @@
 
 <script>
 
-  const ElPopoverDialog = () => import('../../src')
+//  const ElPopoverDialog = () => import('../../src')
 
   export default {
     name: 'App',
-    components: {ElPopoverDialog},
+//    components: {ElPopoverDialog},
     data () {
       return {
         test: true

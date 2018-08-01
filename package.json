@@ -30,10 +30,10 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "element-ui": "latest",
+    "vue": "latest"
   },
   "devDependencies": {
-    "element-ui": "latest",
-    "vue": "latest",
     "vue-style-loader": "^4.1.1",
     "file-loader": "^1.1.4",
     "url-loader": "^1.0.1",
@@ -53,7 +53,7 @@
     "node": ">= 8.0.0",
     "npm": ">= 5.0.0"
   },
-  "browserslist": [-
+  "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
