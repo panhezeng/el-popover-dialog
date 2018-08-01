@@ -5,7 +5,19 @@
     <el-popover-dialog class="icon-delete" :btn-show="false" @confirm="confirm">
       <i class="el-icon-delete" slot="reference"></i>
     </el-popover-dialog>
-    <div v-if="test">被删除的东西</div>
+
+    <el-popover-dialog
+      title="演示slot用法" :popover-content-show="false"
+      btn-txt="演示slot用法" confirm-button-text="可以" @confirm="slotChange('可以')">
+      <template slot="popover-btn" slot-scope="popover">
+        <el-button class="confirm-btn" type="danger" size="mini"
+                   @click="slotChange('不行',popover.hide())">
+          不行
+        </el-button>
+      </template>
+    </el-popover-dialog>
+    <div v-if="show">被删除的东西</div>
+    <div>{{slot}}</div>
   </div>
 </template>
 
@@ -24,12 +36,16 @@
 //    components: {ElPopoverDialog},
     data () {
       return {
-        test: true
+        show: true,
+        slot: ''
       }
     },
     methods: {
       confirm () {
-        this.test = false
+        this.show = false
+      },
+      slotChange (txt) {
+        this.slot = txt
       }
     }
   }

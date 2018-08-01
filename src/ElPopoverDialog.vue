@@ -31,6 +31,7 @@
     name: 'ElPopoverDialog',
     components: {'el-button': Button, 'el-popover': Popover},
     props: {
+      // popover相关配置
       popoverContentShow: {
         type: Boolean,
         default: true
@@ -59,18 +60,23 @@
         type: String,
         default: '确定'
       },
+      // 触发popover的按钮相关配置
+      // 是否显示默认按钮，通常通过reference slot传入自定义触发元素，需要隐藏此按钮
       btnShow: {
         type: Boolean,
         default: true
       },
+      // 是否禁用按钮
       btnDisabled: {
         type: Boolean,
         default: false
       },
+      // 按钮文字
       btnTxt: {
         type: String,
         default: '删除'
       },
+      // 按钮样式，见el-btn组件文档
       btnType: {
         type: String,
         default: 'text'
@@ -98,6 +104,7 @@
         this.visible = false
         this.$emit('confirm')
       },
+      // 如果点击通过popover-btn slot传入popover的元素需要关闭popover，可以通过slot-scope调用此方法
       hide (cb) {
         this.visible = false
         if (Object.prototype.toString.call(cb) === '[object Function]') {
