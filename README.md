@@ -29,6 +29,19 @@
 ```
 
 #### 同步
+
+##### export default components
+```vue
+<script>
+    import ElPopoverDialog from '@panhezeng/el-popover-dialog'
+
+    export default {
+      components: {ElPopoverDialog}
+    }
+</script>
+```
+
+##### Vue.use
 ```vue
 <script>
     import Vue from 'vue'

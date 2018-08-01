@@ -9,12 +9,7 @@ module.exports = {
   },
   externals: {
     'vue': 'Vue',
-    'element-ui': {
-      commonjs: 'element-ui',
-      commonjs2: 'element-ui',
-      amd: 'element-ui',
-      root: 'ELEMENT'
-    }
+    'element-ui': 'ELEMENT'
   },
   module: {
     rules: [
