@@ -1,4 +1,4 @@
-import ElPopoverDialog from './ElPopoverDialog.vue'
+export const ElPopoverDialog = require('./ElPopoverDialog.vue').default
 
 let Vue
 
@@ -22,4 +22,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default ElPopoverDialog
+

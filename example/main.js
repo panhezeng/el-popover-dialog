@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './components/App.vue'
 
 //Vue.use(ElementUI)
-console.log('ELEMENT', ELEMENT)
+//console.log('ELEMENT', ELEMENT)
 new Vue({
   el: '#app',
   render: h => h(App)

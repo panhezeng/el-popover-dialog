@@ -23,13 +23,14 @@
 
 <script>
 
-  import '../../dist/el-popover-dialog.min'
+    import '../../dist/el-popover-dialog.min'
   //  import Vue from 'vue'
   //  import ElPopoverDialog from '../../dist/el-popover-dialog.min'
+  //  const ElPopoverDialog = require('../../dist/el-popover-dialog.min')
 
   //  Vue.use(ElPopoverDialog)
 
-  //  const ElPopoverDialog = () => import('../../dist/el-popover-dialog.min')
+//  const ElPopoverDialog = () => import('../../dist/el-popover-dialog.min')
 
   export default {
     name: 'App',

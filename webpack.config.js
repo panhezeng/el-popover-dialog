@@ -4,9 +4,9 @@ module.exports = {
   output: {
     filename: 'el-popover-dialog.min.js',
     libraryTarget: 'umd',
-    globalObject: 'this',
+    umdNamedDefine: true,
     library: 'ElPopoverDialog',
-    umdNamedDefine: true
+    libraryExport: 'ElPopoverDialog'
   },
   externals: {
     'vue': 'Vue',
