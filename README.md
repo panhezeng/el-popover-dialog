@@ -12,7 +12,7 @@
 
 首先请按element-ui官方文档安装element-ui，确保能正常使用element-ui
 
-修改output了方式，通过require或window方式使用，不需要加.default
+修改了output方式，通过require或window方式使用，不需要加.default
 
 ```vue
 <script>
