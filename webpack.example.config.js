@@ -1,6 +1,8 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-module.exports = {
+const BeforeRunWebpackPlugin = require('@panhezeng/before-run-webpack-plugin')
+
+const config = {
   entry: './example/main.js',
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -61,3 +63,9 @@ module.exports = {
   devServer: {}
 }
 
+module.exports = (env, argv) => {
+  if (argv.mode === 'production') {
+    config.plugins.push(new BeforeRunWebpackPlugin({sed: 'vue'}))
+  }
+  return config
+}

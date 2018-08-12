@@ -26,14 +26,15 @@
   "main": "dist/el-popover-dialog.min.js",
   "scripts": {
     "dev:example": "webpack-dev-server --mode development --open --hot --config webpack.example.config.js",
-    "build:example": "rm -rf docs && mkdir docs && cp index.html docs && webpack --mode production --config webpack.example.config.js",
+    "build:example": "webpack --mode production --config webpack.example.config.js",
     "build": "webpack --mode production"
   },
   "dependencies": {
     "element-ui": "latest",
-    "vue": "^2.5.17"
+    "vue": "latest"
   },
   "devDependencies": {
+    "@panhezeng/before-run-webpack-plugin": "latest",
     "babel-core": "latest",
     "babel-loader": "latest",
     "babel-plugin-syntax-dynamic-import": "latest",
