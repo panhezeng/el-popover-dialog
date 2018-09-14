@@ -3,6 +3,7 @@
     class="popover-dialog"
     :placement="$attrs.placement||'top'"
     v-bind="$attrs"
+    v-on="$listeners"
     v-model="visible">
     <p class="popover-content" v-if="popoverContentShow">{{popoverContent}}</p>
     <slot name="popover-content"/>
@@ -30,6 +31,7 @@
   export default {
     name: 'ElPopoverDialog',
     components: {'el-button': Button, 'el-popover': Popover},
+    inheritAttrs: false,
     props: {
       // popover相关配置
       popoverContentShow: {

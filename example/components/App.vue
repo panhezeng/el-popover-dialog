@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <el-popover-dialog @confirm="confirm"/>
+    <div v-if="show">被删除的东西</div>
+    <div>{{slot}}</div>
+    <el-popover-dialog @show="slotChange('@show')" @hide="slotChange('@hide')" @confirm="confirm"/>
 
     <el-popover-dialog class="icon-delete" :btn-show="false" @confirm="confirm">
       <i class="el-icon-delete" slot="reference"></i>
@@ -16,21 +18,19 @@
         </el-button>
       </template>
     </el-popover-dialog>
-    <div v-if="show">被删除的东西</div>
-    <div>{{slot}}</div>
   </div>
 </template>
 
 <script>
 
-    import '../../dist/el-popover-dialog.min.js'
+  import '../../dist/el-popover-dialog.min.js'
   //  import Vue from 'vue'
   //  import ElPopoverDialog from '../../dist/el-popover-dialog.min.js'
   //  const ElPopoverDialog = require('../../dist/el-popover-dialog.min.js')
 
   //  Vue.use(ElPopoverDialog)
 
-//  const ElPopoverDialog = () => import('../../dist/el-popover-dialog.min.js')
+  //  const ElPopoverDialog = () => import('../../dist/el-popover-dialog.min.js')
 
   export default {
     name: 'App',
