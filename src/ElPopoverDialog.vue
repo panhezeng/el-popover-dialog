@@ -90,6 +90,10 @@
       btnStyle: {
         type: String,
         default: 'color:#f56c6c; margin-right: 0 !important;'
+      },
+      confirmHide: {
+        type: Boolean,
+        default: true
       }
     },
     data () {
@@ -103,7 +107,7 @@
         this.$emit('cancel')
       },
       confirm () {
-        this.visible = false
+        if (this.confirmHide) this.visible = false
         this.$emit('confirm')
       },
       // 如果点击通过popover-btn slot传入popover的元素需要关闭popover，可以通过slot-scope调用此方法
