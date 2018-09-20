@@ -19,7 +19,7 @@
     </div>
     <span class="reference" slot="reference">
       <el-button class="reference-btn" :style="btnStyle"
-                 :size="btnSize" :type="btnType" :disabled="btnDisabled" v-if="btnShow">{{btnTxt}}
+                 v-bind="$attrs" :size="btnSize" :type="btnType" v-if="btnShow">{{btnTxt}}
       </el-button>
       <slot name="reference" :hide="hide"/>
     </span>
@@ -67,11 +67,6 @@
       btnShow: {
         type: Boolean,
         default: true
-      },
-      // 是否禁用按钮
-      btnDisabled: {
-        type: Boolean,
-        default: false
       },
       // 按钮文字
       btnTxt: {
