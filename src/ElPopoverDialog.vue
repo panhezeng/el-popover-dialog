@@ -1,6 +1,7 @@
 <template>
   <el-popover
     class="popover-dialog"
+    style="font-size: 0px;"
     :placement="$attrs.placement||'top'"
     v-bind="$attrs"
     v-on="$listeners"
