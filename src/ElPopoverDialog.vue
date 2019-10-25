@@ -12,12 +12,12 @@
     </p>
     <slot name="popover-content" :hide="hide" />
     <div
-      class="popover-btn"
-      :style="popoverBtnStyle"
+      class="popover-button"
+      :style="popoverButtonStyle"
       v-if="showConfirmButton || showCancelButton"
     >
       <el-button
-        class="cancel-btn"
+        class="cancel-button"
         type="text"
         size="mini"
         v-if="showCancelButton"
@@ -25,7 +25,7 @@
         >{{ cancelButtonText }}
       </el-button>
       <el-button
-        class="confirm-btn"
+        class="confirm-button"
         type="primary"
         size="mini"
         v-if="showConfirmButton"
@@ -33,17 +33,17 @@
       >
         {{ confirmButtonText }}
       </el-button>
-      <slot name="popover-btn" :hide="hide" />
+      <slot name="popover-button" :hide="hide" />
     </div>
     <span class="reference" slot="reference">
       <el-button
-        class="reference-btn"
-        :style="btnStyle"
+        class="reference-button"
+        :style="buttonStyle"
         v-bind="$attrs"
-        :size="btnSize"
-        :type="btnType"
-        v-if="btnShow"
-        >{{ btnTxt }}
+        :size="buttonSize"
+        :type="buttonType"
+        v-if="buttonShow"
+        >{{ buttonTxt }}
       </el-button>
       <slot name="reference" :hide="hide" />
     </span>
@@ -66,7 +66,7 @@ export default {
       type: String,
       default: "确认要删除？"
     },
-    popoverBtnStyle: {
+    popoverButtonStyle: {
       type: String,
       default: "text-align: right; margin: 0"
     },
@@ -88,25 +88,25 @@ export default {
     },
     // 触发popover的按钮相关配置
     // 是否显示默认按钮，通常通过reference slot传入自定义触发元素，需要隐藏此按钮
-    btnShow: {
+    buttonShow: {
       type: Boolean,
       default: true
     },
     // 按钮文字
-    btnTxt: {
+    buttonTxt: {
       type: String,
       default: "删除"
     },
-    // 按钮样式，见el-btn组件文档
-    btnType: {
+    // 按钮样式，见el-button组件文档
+    buttonType: {
       type: String,
       default: "text"
     },
-    btnSize: {
+    buttonSize: {
       type: String,
       default: ""
     },
-    btnStyle: {
+    buttonStyle: {
       type: String,
       default: "color:#f56c6c; margin-right: 0 !important;"
     },
@@ -129,7 +129,7 @@ export default {
       if (this.confirmHide) this.visible = false;
       this.$emit("confirm");
     },
-    // 如果点击通过popover-btn slot传入popover的元素需要关闭popover，可以通过slot-scope调用此方法
+    // 如果点击通过popover-button slot传入popover的元素需要关闭popover，可以通过slot-scope调用此方法
     hide(cb) {
       this.visible = false;
       if (
