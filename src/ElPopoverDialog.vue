@@ -7,28 +7,28 @@
     v-on="$listeners"
     v-model="visible"
   >
-    <p class="popover-content" v-if="popoverContentShow">
+    <p v-if="popoverContentShow" class="popover-content">
       {{ popoverContent }}
     </p>
     <slot name="popover-content" :hide="hide" />
     <div
+      v-if="showConfirmButton || showCancelButton"
       class="popover-button"
       :style="popoverButtonStyle"
-      v-if="showConfirmButton || showCancelButton"
     >
       <el-button
+        v-if="showCancelButton"
         class="cancel-button"
         type="text"
         size="mini"
-        v-if="showCancelButton"
         @click="cancel"
         >{{ cancelButtonText }}
       </el-button>
       <el-button
+        v-if="showConfirmButton"
         class="confirm-button"
         type="primary"
         size="mini"
-        v-if="showConfirmButton"
         @click="confirm"
       >
         {{ confirmButtonText }}
@@ -37,12 +37,12 @@
     </div>
     <span class="reference" slot="reference">
       <el-button
+        v-if="buttonShow"
         class="reference-button"
         :style="buttonStyle"
-        v-bind="$attrs"
         :size="buttonSize"
         :type="buttonType"
-        v-if="buttonShow"
+        v-bind="$attrs"
         >{{ buttonTxt }}
       </el-button>
       <slot name="reference" :hide="hide" />

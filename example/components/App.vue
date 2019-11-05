@@ -19,8 +19,11 @@
     <el-popover-dialog
       title="演示slot用法"
       :popover-content-show="false"
-      button-txt="演示slot用法"
       confirm-button-text="可以"
+      button-txt="演示slot用法"
+      button-size="mini"
+      button-type="danger"
+      button-style=""
       @confirm="slotChange('可以')"
     >
       <template slot="popover-button" slot-scope="popover">
