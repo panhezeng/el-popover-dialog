@@ -43,7 +43,7 @@
         :size="buttonSize"
         :type="buttonType"
         v-bind="$attrs"
-        >{{ buttonTxt }}
+        >{{ buttonText }}
       </el-button>
       <slot name="reference" :hide="hide" />
     </span>
@@ -93,7 +93,7 @@ export default {
       default: true
     },
     // 按钮文字
-    buttonTxt: {
+    buttonText: {
       type: String,
       default: "删除"
     },

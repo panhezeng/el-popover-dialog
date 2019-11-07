@@ -59,7 +59,7 @@ export default {
       default: false
     },
     // 按钮文字
-    buttonTxt: {
+    buttonText: {
       type: String,
       default: "删除"
     },

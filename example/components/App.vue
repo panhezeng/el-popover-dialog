@@ -20,7 +20,7 @@
       title="演示slot用法"
       :popover-content-show="false"
       confirm-button-text="可以"
-      button-txt="演示slot用法"
+      button-text="演示slot用法"
       button-size="mini"
       button-type="danger"
       button-style=""
